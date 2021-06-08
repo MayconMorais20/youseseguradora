@@ -1,3 +1,5 @@
+package tests;
+
 import gerenciar.*;
 import logs.Log;
 import org.junit.Before;
