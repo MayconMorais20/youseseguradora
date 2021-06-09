@@ -1,4 +1,4 @@
-package pageObjects.constantes;
+package pages.constantes;
 
 public enum Aguardar {
     NORMAL(1), ESPERAR(2), ESPERARTESTES(3);

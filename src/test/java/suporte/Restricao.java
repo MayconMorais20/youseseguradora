@@ -1,4 +1,4 @@
-package gerenciar;
+package suporte;
 import logs.Log;
 import org.junit.Test;
 import java.io.FileWriter;

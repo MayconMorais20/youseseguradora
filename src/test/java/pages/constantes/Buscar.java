@@ -1,4 +1,4 @@
-package pageObjects.constantes;
+package pages.constantes;
 
 public enum Buscar {
     XPATH(1), ID(2);

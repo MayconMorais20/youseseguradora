@@ -1,12 +1,12 @@
 package ramos;
 
-import gerenciar.Erros;
-import pageObjects.PaginaIdentificacao;
-import pageObjects.constantes.Aguardar;
-import gerenciar.Variaveis;
+import suporte.Erros;
+import pages.PaginaIdentificacao;
+import pages.constantes.Aguardar;
+import suporte.Variaveis;
 import logs.Log;
-import pageObjects.PaginaInicial;
-import pageObjects.constantes.Buscar;
+import pages.PaginaInicial;
+import pages.constantes.Buscar;
 
 import java.io.IOException;
 

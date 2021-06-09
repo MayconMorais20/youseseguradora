@@ -1,6 +1,6 @@
 package tests;
 
-import gerenciar.*;
+import suporte.*;
 import logs.Log;
 import org.junit.Before;
 import org.junit.Test;

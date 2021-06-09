@@ -1,13 +1,13 @@
-package pageObjects.ferramentas;
+package pages.ferramentas;
 
-import gerenciar.Erros;
+import suporte.Erros;
 import logs.Log;
-import pageObjects.constantes.Aguardar;
-import gerenciar.Variaveis;
+import pages.constantes.Aguardar;
+import suporte.Variaveis;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import pageObjects.constantes.Buscar;
+import pages.constantes.Buscar;
 
 import java.io.IOException;
 

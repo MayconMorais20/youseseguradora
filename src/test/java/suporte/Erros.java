@@ -1,4 +1,4 @@
-package gerenciar;
+package suporte;
 
 import org.junit.Test;
 

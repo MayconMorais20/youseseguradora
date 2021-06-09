@@ -1,4 +1,4 @@
-package gerenciar;
+package suporte;
 
 public class Diretorios {
     public static String nomeSeguradoraPastaLocal = "youseauto";
@@ -6,7 +6,7 @@ public class Diretorios {
     public static String nomeComputador = System.getProperty("user.name");
 
     // adicionar em casos de implementação e teste no computador pessoal/empresa
-    public static String[] usuariosNaoVMS = {"maycon"};
+    //public static String[] usuariosNaoVMS = {"maycon"};
 
     // gerenciadores de diretorios da seguradora
     public static String diretorioPastaRestricao = "/home/"+nomeComputador+"/"+ nomeSeguradoraPastaLocal +"/restricao/";

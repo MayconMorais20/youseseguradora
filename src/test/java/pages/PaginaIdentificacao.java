@@ -1,9 +1,8 @@
-package pageObjects;
+package pages;
 
-import gerenciar.Variaveis;
-import org.openqa.selenium.By;
+import suporte.Variaveis;
 import org.openqa.selenium.WebElement;
-import pageObjects.ferramentas.Ferramentas;
+import pages.ferramentas.Ferramentas;
 
 import java.io.IOException;
 

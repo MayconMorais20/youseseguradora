@@ -1,10 +1,8 @@
-package gerenciar;
+package suporte;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.io.File;
-import java.time.Duration;
-import java.util.ArrayList;
 
 public class Variaveis extends Diretorios{
     // site seguradora
@@ -14,9 +12,11 @@ public class Variaveis extends Diretorios{
     // numero do calculo a ser processado e nome do seu PDF
     public static String numeroArquivo;
     public static File NomePdfDownload;
+    public static String nomeDownload;
 
     // drive do Navegador
     public static WebDriver navegador;
+
     // waits do Selenium e elemento a procurar
     public static WebDriverWait aguardar;
     public static WebDriverWait aguardarParaTestesRapidos;

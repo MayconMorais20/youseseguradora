@@ -1,4 +1,4 @@
-package gerenciar;
+package suporte;
 import logs.Log;
 import org.apache.commons.io.FileUtils;
 import org.junit.Test;
@@ -9,7 +9,7 @@ public class Arquivos extends Variaveis{
     public void testeArquivos() throws IOException, InterruptedException {
         iniciarExtracaoDeDadosTxt();
         //moverArquivoParaRestricao("risco sem aceitacao");
-        pegarArquivosFreenas();
+        criarCotacaoDoCalculo("0800, me liga!");
     }
 
     private void atribuirValorVariaveis(String numeroArquivo ) throws IOException {
@@ -87,18 +87,18 @@ public class Arquivos extends Variaveis{
 
         }
     }
-    private Boolean verificarVmOuComputadorPessoal(){
-        Boolean vm = true;
-        for( String usario : usuariosNaoVMS ){
-            if (usario.toUpperCase().equals(nomeComputador.toUpperCase())){
-                vm = false;
-            }
-        }
-        return vm;
-    }
+//    private Boolean verificarVmOuComputadorPessoal(){
+//        Boolean vm = true;
+//        for( String usario : usuariosNaoVMS ){
+//            if (usario.toUpperCase().equals(nomeComputador.toUpperCase())){
+//                vm = false;
+//            }
+//        }
+//        return vm;
+//    }
     public void pegarArquivosFreenas() throws IOException {
-        // se retornar true é uma vm, portanto vai buscar do freenas os arquivos.
-        if (verificarVmOuComputadorPessoal()){
+        // vai buscar do freenas os arquivos caso esta na vm robertinho.
+        if (nomeComputador.equals("robertinho")){
 
             //cria arquivo com o nome da vm caso nao exista
             new Vm().criarNomeVM();
@@ -122,6 +122,30 @@ public class Arquivos extends Variaveis{
             resumoVm.mkdir();
 
             FileUtils.copyDirectory(resumoFreenas, resumoVm);
+        }
+    }
+    public void criarMatrizDoCalculo(String numeroCotacao) throws IOException {
+        // vericia a existencia da matriz
+        File file = new File(diretorioCotacao + "matriz.txt");
+
+        if(! file.exists()){
+            //prepara para criar um arquivo matriz
+            FileWriter matriz = new FileWriter(diretorioCotacao + "matriz.txt");
+            PrintWriter gravarNoArquivo = new PrintWriter(matriz);
+            gravarNoArquivo.printf(numeroCotacao);
+            matriz.close();
+        }
+    }
+    public void criarCotacaoDoCalculo(String numeroCotacao) throws IOException {
+        // vericia a existencia da matriz
+        File file = new File(diretorioCotacao + "cotacao.txt");
+
+        if(! file.exists()){
+            //prepara para criar um arquivo matriz
+            FileWriter matriz = new FileWriter(diretorioCotacao + "cotacao.txt");
+            PrintWriter gravarNoArquivo = new PrintWriter(matriz);
+            gravarNoArquivo.printf(numeroCotacao);
+            matriz.close();
         }
     }
 }

@@ -1,4 +1,4 @@
-package gerenciar;
+package suporte;
 import logs.Log;
 import org.junit.Test;
 import java.io.File;
@@ -33,13 +33,16 @@ public class Pdf extends Variaveis{
                 for (File file : ListaDeArquivosDownload) {
                     ListaDeNomesArquivosDownload.add(file.getName());
                 }
-
-                NomePdfDownload = new File(diretorioPastaDownload+ListaDeNomesArquivosDownload.get(0));
+                nomeDownload = ListaDeNomesArquivosDownload.get(0);
+                NomePdfDownload = new File(diretorioPastaDownload + nomeDownload);
                 // verifica se existe um arquivo ( confirmação )
                 if (!NomePdfDownload.exists()) {
                     new Log().exibirLog("ainda não existe nenhum arquivo na pasta download.");
                 }else{
-                    break;
+                    // nao pode mover um pdf que ainda está em processo de Download
+                    if (! nomeDownload.toLowerCase().contains(".crdownload")){
+                        break;
+                    }
                 }
             } catch (Exception e) {
                 System.out.println(e.getMessage());
